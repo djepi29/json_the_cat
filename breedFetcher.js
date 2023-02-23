@@ -1,6 +1,6 @@
-const request = require("request")
+const request = require("request");
 const [,,breedName] = process.argv; // good test chartreux //bad test megatron
-const URL =  `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`
+const URL =  `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 // console.log(request)// making sure request works
 request(URL, (error, response, body) => {
   if (error) { // if the request format is not respected to the dot it will throw an error
@@ -20,5 +20,5 @@ request(URL, (error, response, body) => {
   // console.log("connect to server");
   // console.log(typeof data);
   // console.log("JASON.parse(body):", data);
-  console.log(data[0]["description"]);// 
-})
+  console.log(data[0]["description"]);//
+});
